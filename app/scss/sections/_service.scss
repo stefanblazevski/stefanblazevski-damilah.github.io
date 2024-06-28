@@ -1,0 +1,75 @@
+.service {
+  text-align: center;
+
+  @include breakpoint-up(medium) {
+    text-align: left;
+  }
+
+  &__grid {
+
+    @include breakpoint-up(medium) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    padding: 1.5rem;
+    border: 1px solid $border-color;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    @include breakpoint-up(medium) {
+      flex: 0 0 50%;
+      border: none;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include breakpoint-up(large) {
+      flex: 1;
+      border: 1px solid $border-color;
+
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+
+  &__icon {
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: $font-lg;
+    font-weight: bold;
+    line-height: 1.15;
+    color: $text-body;
+    margin-bottom: 2rem;
+
+    @include breakpoint-up(large) {
+      font-size: 1.5rem;
+    }
+
+    @include breakpoint-down(xlarge) {
+      font-size: $font-med;
+    }
+  }
+
+  &__description {
+    font-size: $font-lg;
+    line-height: 1.5;
+
+    @include breakpoint-down(xlarge) {
+      font-size: $font-med;
+    }
+
+    @include breakpoint-down(small) {
+      font-size: 1rem;
+    }
+  }
+}

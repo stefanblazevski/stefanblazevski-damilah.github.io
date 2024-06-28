@@ -1,0 +1,168 @@
+.footer {
+  position: relative;
+
+  .container {
+    padding: 3.25rem 2rem;
+
+    @include breakpoint-down(medium) {
+      padding: 4.5rem 2rem 2rem 2rem;
+    }
+
+    @include breakpoint-down(small) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__contact-us {
+    a {
+      position: absolute;
+      top: 0;
+      font-size: $font-lg;
+      font-weight: bold;
+      color: $accent-chocolate;
+      margin: 1rem 0 0 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: flex-end;
+
+    @include breakpoint-down(small) {
+      justify-content: flex-start;
+      flex-direction: column;
+      padding-top: 1rem;
+    }
+
+    &--address {
+      padding-right: 3.875rem;
+      max-width: 50%;
+
+      @include breakpoint-down(small) {
+        padding: 0 0 2rem 0;
+        max-width: 100%;
+      }
+
+      h6 {
+        font-size: $font-lg;
+        margin-bottom: 1.125rem;
+
+        @include breakpoint-down(small) {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      p {
+        margin: 0;
+        font-size: $font-sm;
+      }
+    }
+
+    &--enquiries {
+      max-width: 50%;
+
+      @include breakpoint-down(small) {
+        max-width: 100%;
+      }
+
+      h6 {
+        font-size: $font-lg;
+        margin-bottom: 1.125rem;
+
+        @include breakpoint-down(small) {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      p {
+        margin: 0;
+        font-size: $font-sm;
+      }
+    }
+  }
+
+  &__bottom {
+    background-color: $bg-secondary;
+    color: $text-white;
+
+    .container {
+      padding: 2rem 3.875rem;
+
+      @include breakpoint-down(large) {
+        padding: 2rem;
+      }
+
+      @include breakpoint-down(small) {
+        flex-direction: column;
+        padding: 1rem 2rem;
+      }
+
+    }
+
+    &--links {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+
+
+      @include breakpoint-down(small) {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $border-color-secondary;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      @include breakpoint-down(medium) {
+        gap: 2rem;
+      }
+
+      a {
+        font-size: $font-lg;
+
+        @include breakpoint-down(medium) {
+          font-size: 1.125rem;
+        }
+      }
+    }
+
+    &--nav {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+
+
+      @include breakpoint-down(small) {
+        padding-top: 1rem;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      @include breakpoint-down(medium) {
+        gap: 2rem;
+      }
+
+      a {
+        font-size: $font-sm;
+
+        @include breakpoint-down(medium) {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      @include breakpoint-down(small) {
+        text-decoration: underline;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+}

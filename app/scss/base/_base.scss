@@ -1,0 +1,191 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font;
+  font-size: $font-sm;
+  font-weight: 300;
+  color: $primary-color;
+  background-color: $bg-body;
+  line-height: 1.3;
+  overflow-x: hidden;
+
+  @include breakpoint-up(large) {
+    font-size: $font-med;
+  }
+
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+// Text
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.15;
+  color: $text-body;
+  margin: 0px auto;
+}
+
+h1 {
+  font-size: 21.875rem;
+
+  @include breakpoint-down(xlarge) {
+    font-size: 18.75rem;
+  }
+
+  @include breakpoint-down(large) {
+    font-size: 15.625rem;
+  }
+}
+
+h2 {
+  font-size: 4rem;
+
+  @include breakpoint-down(large) {
+    font-size: 3rem;
+  }
+}
+h3 {
+  font-size: 3.313rem;
+
+  @include breakpoint-down(xlarge) {
+    font-size: 2.25rem;
+  }
+}
+h4 {
+  font-size: 3rem;
+
+  @include breakpoint-down(large) {
+    font-size: $font-med;
+  }
+}
+h5 {
+  font-size: 2.25rem;
+
+  @include breakpoint-down(xlarge) {
+    font-size: 1.625rem;
+  }
+}
+h6 {
+  font-size: 2rem;
+
+  @include breakpoint-down(xlarge) {
+  }
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 2.25rem;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+// Spacing
+.container {
+  max-width: 108rem;
+  margin: 0 auto;
+
+  &--pall {
+    padding-top: 4.375rem;
+    padding-right: 2rem;
+    padding-bottom: 4.375rem;
+    padding-left: 2rem;
+
+    @include breakpoint-down(small) {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    @include breakpoint-up(large) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+  &--py {
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+
+    @include breakpoint-up(large) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+  &--px {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  &--pt {
+    padding-top: 4.375rem;
+
+    @include breakpoint-up(large) {
+      padding-top: 6rem;
+    }
+  }
+  &--pr {
+    padding-right: 1.5rem;
+  }
+  &--pb {
+    padding-bottom: 4.375rem;
+
+    @include breakpoint-up(large) {
+      padding-bottom: 6rem;
+    }
+  }
+  &--pl {
+    padding-left: 1.5rem;
+  }
+}
+
+// Flexbox
+.flex {
+  display: flex;
+
+  &-column {
+    flex-direction: column;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+// Visibility
+.hide-for-mobile {
+  @include breakpoint-down(large) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
